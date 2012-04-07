@@ -1,0 +1,42 @@
+PBAL-SWC
+The PHP-Based Api Library for Star Wars Combine
+
+Index
+  1. Copyright
+  2. Installation
+  3. Use
+
+  
+1. Copyright
+Copyright (c) 2012 Joseph 'Hardolaf' Warner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+2. Installation
+This software requires a webserver which is compatible with Apache2.2 or greater, MySQL 5 or greater, and PHP5.3. This software has not been tested with PHP5.4.
+
+Provided is a sample index.php page that can access the various functions on the backend. It exists as an example only, please do not base your website on it, it may not work as expected.
+
+Copy the contents of the 'lib' folder to your website's include path.
+
+On all pages making calls to these functions, you will need to include the 'path.php' file located in 'lib'.
+
+3. Use
+To make a call to the Star Wars Combine Server use the following form:
+	$request = new RestRequest($name, $verb = 'GET', $version=WEB_API_CONFIG_VERSION, array $requestBody = array(), $server=WEB_API_CONFIG_SERVER, $url = null);
+		The variables are defined as follows:
+			$name: the name of the resource being requested according the SWCombine Web API documentation.
+			$verb: GET, PUT, or POST. Default 'GET'
+			$version: the version of the call to make. Only use supported versions. Default WEB_API_CONFIG_VERSION
+			$requestBody: an array of the information being given to the server. Default array()
+			$url: a url to the resource if it is a non-standard call or must be handled in a way that is not supported by the code. This should be a rarely used override, usually handled by the PBAL-SWC code.
+	$request->execute();
+		This makes the actual call to the server. Other options can be set on the $request variable before the call is made.
+	$handler = new RequestHandler($request);
+		This requests the proper handler for the request. These should be provided by the PBAL-SWC library.
+		
+	
