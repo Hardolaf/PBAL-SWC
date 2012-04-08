@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Joseph 'Hardolaf' Warner
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class TimeRealPOSTHandler extends DataHandler {
     //Restrict all data from modification.

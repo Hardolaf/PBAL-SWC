@@ -21,7 +21,7 @@ define('WEB_API_CONFIG_SECRET', '');
 define('WEB_API_CONFIG_TIMEZONE', '');
 
 //Do not change unless you know what you are doing. Most people should be pointing to http://ws.swcombine.com/
-define('WEB_API_CONFIG_SERVER', 'http://dev.swcombine.net/');
+define('WEB_API_CONFIG_SERVER', 'http://ws.swcombine.com/');
 
 //WEB API versions currently available:
 define('WEB_API_VERSION_0_1', '0.1');
@@ -31,18 +31,18 @@ define('WEB_API_CONFIG_VERSION', WEB_API_VERSION_0_1);
 
 
 /* Service Configurations */
-//Newsbine Release Specific
-define('SERVICE_CONFIG_NEWSBINE_VERSION', 0.2);
-define('SERVICE_CONFIG_NEWSBINE_LIBRARY_URL', '');
+//PBAL-SWC Release Specific
+define('SERVICE_CONFIG_PBAL_SWC_VERSION', 0.2);
+define('SERVICE_CONFIG_PBAL_SWC_LIBRARY_URL', 'https://github.com/Hardolaf/PBAL-SWC');
 
 //Bug Tracker
-define('SERVICE_CONFIG_BUGTRACKER', '');
+define('SERVICE_CONFIG_BUGTRACKER', 'https://github.com/Hardolaf/PBAL-SWC/issues');
 
 //Piwik Tracker
 define('SERVICE_CONFIG_PIWIK', FALSE);
 define('SERVICE_CONFIG_PIWIK_URL', '');
 define('SERVICE_CONFIG_PIWIK_URL_SECURE', '');
-define('SERVICE_CONFIG_PIWIK_SITE_ID');
+define('SERVICE_CONFIG_PIWIK_SITE_ID', 1);
 
 //Database settings
 define('SERVICE_CONFIG_DB_DATABASE', '');

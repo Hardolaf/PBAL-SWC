@@ -1,8 +1,6 @@
 <?php
-require_once('../NewsGnsHandlerAbstractClass.inc');
-
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class NewsGnsSocialPUTHandler extends NewsGnsHandlerAbstract {
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class GUIDraw {
 
@@ -94,10 +94,10 @@ class GUIDraw {
             <a href="?page=About">About</a>&nbsp;&nbsp;&nbsp;<a href="?page=Legal">Legal</a>&nbsp;&nbsp;&nbsp;<a href="<?php echo SERVICE_CONFIG_BUGTRACKER; ?>">Bugs</a>
         </div>
         <div class="powered_by">
-            Powered by <a href="<?php echo SERVICE_CONFIG_NEWSBINE_LIBRARY_URL; ?>">NewsBine Library v<?php echo SERVICE_CONFIG_NEWSBINE_VERSION; ?></a>
+            Powered by <a href="<?php echo SERVICE_CONFIG_PBAL_SWC_LIBRARY_URL; ?>">PBAL-SWC v<?php echo SERVICE_CONFIG_PBAL_SWC_VERSION; ?></a>
         </div>
         <div class="copyright">
-            &copy; Joseph 'Hardolaf' Warner 2012 All Rights Reserved
+            &copy; Joseph 'Hardolaf' Warner 2012 Licensed under the MIT license
         </div>
         <?php  if(SERVICE_CONFIG_PIWIK) {
             $this->piwik();

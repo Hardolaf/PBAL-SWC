@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class NewsGNSHelper {
     static function getPost($postID, $refresh = false) {

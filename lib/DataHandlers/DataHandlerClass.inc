@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Joseph 'Hardolaf' Warner
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 abstract class DataHandler {
 

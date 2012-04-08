@@ -1,8 +1,6 @@
 <?php
-require_once('DataHandler/News/Gns/NewsGnsHandlerAbstractClass.inc');
-
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class NewsGnsPUTHandler extends NewsGnsHandlerAbstract {
 

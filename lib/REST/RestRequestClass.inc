@@ -5,7 +5,7 @@
  * 
  * To properly process data retrieved, helper classes will be included. 
  * 
- * @author Joseph 'Hardolaf' Warner
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class RestRequest
 {
