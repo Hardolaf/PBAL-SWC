@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 abstract class NewsGnsHandlerAbstract extends DataHandler {
     protected $name;

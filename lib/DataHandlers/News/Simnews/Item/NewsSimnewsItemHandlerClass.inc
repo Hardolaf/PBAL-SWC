@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class NewsSimnewsItemGETHandler extends DataHandler {
 

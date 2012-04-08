@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 abstract class NewsSimnewsHandlerAbstract extends DataHandler {
     protected $name;

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Joseph 'Hardolaf' Warner
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class TimeCGTPOSTHandler extends DataHandler {
     //Restrict all data from modification.

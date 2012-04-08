@@ -1,8 +1,6 @@
 <?php
-require_once('../NewsSimnewsHandlerAbstractClass.inc');
-
 /**
- * @author Hardolaf
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com>
  */
 class NewsSimnewsTechnicalGETHandler extends NewsSimnewsHandlerAbstract {
 

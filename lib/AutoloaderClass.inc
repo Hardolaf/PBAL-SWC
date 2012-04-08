@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @author Joseph 'Hardolaf' Warner <hardolaf@gmail.com> 
+ */
 class Autoloader {
     public static $instance;
 
