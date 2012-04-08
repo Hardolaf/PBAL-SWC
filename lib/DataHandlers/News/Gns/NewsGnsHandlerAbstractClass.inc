@@ -1,6 +1,4 @@
 <?php
-require_once('path.php');
-
 /**
  * @author Hardolaf
  */
@@ -27,30 +25,42 @@ abstract class NewsGnsHandlerAbstract extends DataHandler {
         }
         $this->requestName = 'news-gns-item';
         $this->total = $response->total;
+
+        $this->savePostIDs();
     }
 
-    public function getPost($index) {
-        if(!is_numeric($index) || !array_key_exists($index, $this->posts)) {
+    public function getPost($index, $refresh = false) {
+        if(!is_numeric($index) || !array_key_exists($index, $this->postIDs)) {
             throw new Exception('Requested index does not exist');
         }
 
-        $PostRequest = new RestRequest('news-gns-item', 'GET', WEB_API_CONFIG_VERSION, array(), WEB_API_CONFIG_SERVER, $this->posts['index']);
-        $PostRequest->execute();
-        $PostResponse = new RequestHandler($PostRequest);
-
-        return $PostResponse->handler;
+        return NewsGNSHelper::getPost($this->postIDs[$index], $refresh);
     }
 
-    public function getAllPosts() {
+    public function getAllPosts($refresh = false) {
         $posts = array();
-        foreach($this->posts as $href) {
-            $PostRequest = new RestRequest('news-gns-item', 'GET', WEB_API_CONFIG_VERSION, array(), WEB_API_CONFIG_SERVER, $href);
-            $PostRequest->execute();
-            $PostResponse = new RequestHandler($PostRequest);
-
-            $posts[] = $PostResponse->handler;
+        foreach($this->postIDs as $id) {
+            $posts[] = NewsGNSHelper::getPost($id, $refresh);
         }
         return $posts;
+    }
+
+    public function savePost($index) {
+        $DB = new DB();
+
+        if(!array_key_exists($index, $this->postsIDs)) {
+            throw new InvalidArgumentException('Requested index does not exist');
+        }
+
+        $DB->query('INSERT IGNORE INTO news_gns SET id ='.$this->postIDs[$index]);
+    }
+
+    public function savePostIDs() {
+        $DB = new DB();
+
+        foreach($this->postIDs as $postID) {
+            $DB->query('INSERT IGNORE INTO news_gns SET id ='.$postID);
+        }
     }
 }
 

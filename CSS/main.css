@@ -1,0 +1,158 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* MAIN STYLES */
+html {
+    width:100%;
+    height:100%;
+}
+
+body {
+    background-color:#04074F;
+    color:white;
+    width:99%;
+    height:100%;
+    position: relative;
+    left: .5%;
+}
+
+/* lists */
+li {
+    margin-left:30px;
+}
+
+/** links */
+a:link {
+    color:#E1E1E1;
+}
+
+a:visited {
+    color:#E1E0B0;
+}
+
+a.button {
+    text-decoration:none;
+}
+
+/** Tables **/
+table.footer{
+	text-align:center;
+}
+
+td{
+    padding:5px;
+}
+
+/** divs **/
+div.title {
+    text-align: center;
+    position: relative;
+}
+
+div.clock {
+    position: relative;
+    width: 140px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+div.clock > table, td{
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+}
+
+div.copyright, div.footer_menu, div.powered_by {
+    text-align:center;
+    margin:10px;
+}
+
+div.input {
+    margin:5px;
+}
+
+
+/** Live Validation **/
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}

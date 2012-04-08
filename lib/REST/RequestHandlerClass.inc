@@ -1,6 +1,4 @@
 <?php
-require_once 'path.php';
-
 /**
  * @author Joseph 'Hardolaf' Warner
  */
@@ -54,6 +52,7 @@ class RequestHandler {
                 }
                 $messages = implode($messages, '; ');
                 throw new Exception('One or more rate limit has been exceeded: '.$messages);
+            case 400:
             case 401:
             case 404:
             case 500:

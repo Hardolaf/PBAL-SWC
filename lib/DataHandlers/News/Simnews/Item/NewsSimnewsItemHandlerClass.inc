@@ -1,6 +1,4 @@
 <?php
-require_once('path.php');
-
 /**
  * @author Hardolaf
  */
@@ -39,6 +37,16 @@ class NewsSimnewsItemGETHandler extends DataHandler {
         $this->postdateUNIX = $response->postdateUNIX;
         $this->id = $response->id;
         $this->category = $response->category;
+
+        $this->savePost();
+    }
+
+    public function savePost() {
+        $DB = new DB();
+
+        $DB->prepare("REPLACE INTO news_simnews SET id = ?, url = ?, logo = ?, author = ?, lastEditHandle = ?, lastEditDate = ?, lastEditSec = ?, title = ?, body = ?, postdate = ?,
+                postdateUNIX = ?, category = ?, lastAccessTime = ?", $this->id, $this->url, $this->logo, $this->author, $this->lastEditHandle, $this->lastEditDate, $this->laseEditSec,
+                $this->title, $this->body, $this->postdate, $this->postdateUNIX, $this->category, time());
     }
 }
 

@@ -1,6 +1,4 @@
 <?php
-require_once('path.php');
-
 /**
  * @author Hardolaf
  */
@@ -41,6 +39,16 @@ class NewsGNSItemGETHandler extends DataHandler {
         $this->postdateUNIX = $response->postdateUNIX;
         $this->id = $response->id;
         $this->category = $response->category;
+
+        $this->savePost();
+    }
+
+    public function savePost() {
+        $DB = new DB();
+
+        $DB->prepare("REPLACE INTO news_gns SET id = ?, url = ?, logo = ?, author = ?, hacked = ?, location = ?, faction = ?, factionType = ?, title = ?, body = ?, postdate = ?,
+                postdateUNIX = ?, category = ?, lastAccessTime = ?", $this->id, $this->url, $this->logo, $this->author, $this->hacked, $this->location, $this->faction, $this->factionType,
+                $this->title, $this->body, $this->postdate, $this->postdateUNIX, $this->category, time());
     }
 }
 

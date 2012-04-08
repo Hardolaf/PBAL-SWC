@@ -1,6 +1,4 @@
 <?php
-require_once 'path.php';
-
 /**
  * This class is a wrapper class that will send requests to the Star Wars Combine Server.
  * It is meant to serve any request you need.
